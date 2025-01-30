@@ -1,0 +1,366 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	padding: 11px;
+	display: flex;
+	justify-content: center;
+	background-color: #ecd0d0;
+	color: whitesmoke;
+}
+.screen
+{
+	padding: 42px 0;
+	background-color: rgb(205, 166, 166);
+	display: flex;
+	flex-direction: column;
+	gap: 70px;
+	border-radius: 6px;
+	width: 700px;
+	max-height: 100vh;
+}
+.boot
+{
+	width:100%;
+	height: 302px;
+	border-bottom: 1px solid black;
+}
+.midle
+{
+	position: relative;
+	height: 402px;
+}
+/* boot items */
+.cards_boot
+{
+	display: flex;
+	justify-content: space-evenly;
+	width:100%;
+	padding: 11px;
+}
+.health_boot
+{
+	height: 30px;
+	width: 200px;
+}
+/* .bcure{
+	height: 100%;
+	width: 100%;
+	background-color: green;
+} */
+/* human item */
+
+.cards_human
+{
+	margin-top: 22px;
+	justify-content: center;
+	display: flex;
+	gap: 50px;
+	width : 100%;
+	height: 60%;
+}
+
+.health_human
+{
+	margin-top: 22px;
+	height: 30px;
+	width: 300px;
+}
+.hcure{
+	height: 100%;
+	width: 100%;
+}
+/* style for js elements */
+
+.card_visible
+{
+	cursor: pointer;
+	width: 150px;
+	height: 200px;
+	background-color: rgb(109, 31, 31);
+	border-radius: 3px;
+	align-items: center;
+	align-content: center;
+	margin-top: 22px;
+	transition: .3s;
+	animation: 3s infinite cae;
+}
+.card_visible:hover
+{
+	background-color: rgb(116, 5, 5);
+	transform:scale(1.1);
+
+}
+.card_visible:nth-child(2)
+{
+	margin-top: 0;
+	animation: 3s infinite ca2;
+}
+.bplace
+{
+	animation: .7s lolo;
+}
+.pplace
+{
+	animation: .7s lolo;
+}
+@keyframes lolo
+{
+	0%
+	{
+		transform: scale(1, 1);
+	}
+	50%
+	{
+		transform: scale(1.1, 1.1);
+	}
+	100%
+	{
+		transform: scale(1, 1);
+	}
+}
+
+@keyframes ca2
+{
+	0%
+	{
+		margin-top: 0px;
+		
+	}
+	50%
+	{
+		margin-top: 7px;
+	}
+	100%
+	{
+		margin-top: 0px;
+	}
+}
+@keyframes cae {
+
+	0%
+	{
+		margin-top: 7px;
+		
+	}
+	50%
+	{
+		margin-top: 0px;
+	}
+	100%
+	{
+		margin-top: 7px;
+	}
+	
+}
+.card_visible img
+{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.sp
+{
+	width: 100px;
+	height: 100%;
+}
+
+.card_unvisble
+{
+	width: 150px;
+	height: 200px;
+	background-color: rgb(65, 18, 18);
+	border-radius: 3px;
+}
+/* win */
+.Win
+{
+	padding: 20px;
+	gap: 32px;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	margin-left: 50%;
+	transform: translatex(-50%);
+	margin-top: 50%;
+	align-content: center;
+	z-index: 99;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	background-color: #e9e9e9;
+	width: 500px;
+	height: 230px;
+	font-size: 32px;
+	color: green;
+	align-items: center;
+	text-align: center;
+}
+.Win button
+{
+	
+	font-weight: 660;
+	cursor: pointer;
+	width: 130px;
+	height: 60px;
+	background-color: green;
+	border: none;
+	border-radius: 11px;
+	transition: .4s;
+}
+.Win button:hover
+{
+	background-color: rgb(29, 159, 29);
+}
+.Lose
+{
+	padding: 40px;
+	gap: 32px;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	margin-left: 50%;
+	transform: translatex(-50%);
+	margin-top: 50%;
+	align-content: center;
+	z-index: 99;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	background-color: #e9e9e9;
+	width: 500px;
+	height: 230px;
+	font-size: 32px;
+	color: rgb(128, 0, 36);
+	align-items: center;
+	text-align: center;
+}
+.comment
+{
+	position: relative;
+	padding: 12px;
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+	margin-top: 11px;
+	right: 0;
+	background-color: white;
+	width: 200px;
+	max-height: 300px;
+	overflow-y: auto;
+	position: absolute;
+	border-bottom-left-radius: 22px;
+	border-top-left-radius: 11px;
+	transition: .6s;
+}
+.comment .newp
+{
+	text-align: center;
+	color: whitesmoke;
+	font-size: 22px;
+	padding: 5px;
+	background-color: rgb(139, 163, 119);
+	border-radius: 3px;
+	width: 100%;
+	transition: .3s ease;
+	animation:forwards as 1s;
+}
+.comment .newb
+{
+	text-align: center;
+	color: whitesmoke;
+	font-size: 22px;
+	padding: 5px;
+	background-color: rgb(199, 121, 121);
+	border-radius: 3px;
+	width: 100%;
+	transition: .3s ease;
+	animation:forwards as 1s;
+}
+.comment .new:hover
+{
+	background-color: rgb(100, 99, 99);
+}
+@keyframes as {
+	0%{
+		transform: translateY(-60px);
+		visibility:hidden;
+	}
+	100%
+	{
+		transform: translateY(0);
+		visibility:visible;
+	}
+}
+.backd
+{
+	position: absolute;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background-color: #22151527;
+}
+.Lose button
+{
+	font-weight: 660;
+	cursor: pointer;
+	width: 130px;
+	height: 60px;
+	background-color: rgb(117, 146, 232);
+	border: none;
+	border-radius: 11px;
+	transition: .4s;
+}
+.Lose button:hover
+{
+	background-color: rgb(200, 211, 241);
+
+}
+
+/* midle handler */
+
+.pvb
+{
+	align-items: center;
+	margin-top: 100px;
+	margin-left: 50%;
+	transform: translatex(-50%);
+	width: 50%;
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	gap: 22px;
+}
+
+.p_move, .b_move
+{
+	width: 150px;
+	height: 200px;
+	background-color: #dfcdcd;
+	border-radius: 11px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	
+}
+.p_move img ,
+.b_move img
+{
+	width: 100%;
+	object-fit: cover;
+	height: 100%;
+}
+
+#psc
+{
+	position: relative;
+	background-color: rgba(178, 228, 178, 0.357);
+	z-index: 99;
+	cursor: alias;
+}
+.hated, .hated_b
+{
+	font-size: 22px;
+	height: 30px;
+	font-weight: 700;
+	color: purple;
+}
